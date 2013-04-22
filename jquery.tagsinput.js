@@ -189,7 +189,8 @@
       placeholderColor:'#666666',
       autosize: true,
       comfortZone: 20,
-      inputPadding: 6*2
+      inputPadding: 6*2,
+      extraClass: null
     },options);
 
 		this.each(function() { 
@@ -218,7 +219,7 @@
 				tags_callbacks[id]['onChange'] = settings.onChange;
 			}
 	
-			var markup = '<div id="'+id+'_tagsinput" class="tagsinput"><div id="'+id+'_addTag">';
+			var markup = '<div id="'+id+'_tagsinput" class="tagsinput '+settings.extraClass+'"><div id="'+id+'_addTag">';
 			
 			if (settings.interactive) {
 				markup = markup + '<input id="'+id+'_tag" value="" data-default="'+settings.defaultText+'" />';
